@@ -5,64 +5,56 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function AvatarPage() {
-  // Figma design components - Direct exports from Figma design system
-  const figmaDesigns = {
+  // Figma component exports
+  const figmaImages = {
+    title: 'https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f8c92cf8-8d8d-4c24-98ca-be480ef2fed2',
     circle: 'https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f79e9deb-866a-4f63-b598-44147afd420f',
     square: 'https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/94e91b1e-e3aa-4488-96fe-a2d0f019dd1c',
     group: 'https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/29b24862-bdc3-46fd-a7f2-2c3333e64a12',
-    full: 'https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6073a2dc-e0b2-4ed7-bc0f-8d554a300706',
   }
 
   return (
     <div className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
+      <div className="max-w-5xl mx-auto">
+        {/* Header from Figma */}
         <div className="mb-12">
-          <h1 className="text-4xl font-bold tracking-tight mb-2">Avatar Component</h1>
-          <p className="text-lg text-muted-foreground">
-            User avatars from shadcn/ui design system - Figma design reference
-          </p>
+          <div className="relative w-full h-auto mb-8">
+            <Image
+              src={figmaImages.title}
+              alt="Avatar Component Title"
+              width={600}
+              height={150}
+              priority
+              className="w-full h-auto"
+            />
+          </div>
         </div>
-
-        {/* Full Design Overview */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle>Design Overview</CardTitle>
-            <CardDescription>Complete Avatar component design from Figma</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="relative w-full h-auto">
-              <Image
-                src={figmaDesigns.full}
-                alt="Avatar Component Design Overview"
-                width={1200}
-                height={800}
-                priority
-                className="w-full h-auto rounded-lg border border-border"
-              />
-            </div>
-          </CardContent>
-        </Card>
 
         {/* Circle Avatar Component */}
         <Card className="mb-8">
           <CardHeader>
             <CardTitle>Circle Avatar</CardTitle>
-            <CardDescription>Circular avatar with image - Primary component</CardDescription>
+            <CardDescription>Circular avatar component with image</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="relative w-full h-auto flex justify-center p-8 bg-muted rounded-lg">
               <Image
-                src={figmaDesigns.circle}
-                alt="Circle Avatar Component"
-                width={400}
+                src={figmaImages.circle}
+                alt="Circle Avatar"
+                width={600}
                 height={300}
-                className="w-auto h-auto"
+                className="w-full h-auto max-w-md"
               />
             </div>
-            <p className="text-sm text-muted-foreground mt-4">
-              Circular avatar component with rounded corners (radius: 100%). Supports image fill with proper aspect ratio constraints.
-            </p>
+            <div className="mt-4 space-y-2">
+              <p className="text-sm font-medium">Component Details:</p>
+              <ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
+                <li>Circular shape with full rounded corners (100%)</li>
+                <li>Image fill with FILL scale mode</li>
+                <li>1:1 aspect ratio (square dimensions)</li>
+                <li>Scalable to various sizes</li>
+              </ul>
+            </div>
           </CardContent>
         </Card>
 
@@ -70,21 +62,27 @@ export default function AvatarPage() {
         <Card className="mb-8">
           <CardHeader>
             <CardTitle>Square Avatar</CardTitle>
-            <CardDescription>Square avatar with rounded corners</CardDescription>
+            <CardDescription>Square avatar component with rounded corners</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="relative w-full h-auto flex justify-center p-8 bg-muted rounded-lg">
               <Image
-                src={figmaDesigns.square}
-                alt="Square Avatar Component"
-                width={400}
+                src={figmaImages.square}
+                alt="Square Avatar"
+                width={600}
                 height={300}
-                className="w-auto h-auto"
+                className="w-full h-auto max-w-md"
               />
             </div>
-            <p className="text-sm text-muted-foreground mt-4">
-              Square avatar component with slightly rounded corners. Maintains aspect ratio for all image sizes.
-            </p>
+            <div className="mt-4 space-y-2">
+              <p className="text-sm font-medium">Component Details:</p>
+              <ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
+                <li>Square shape with subtle rounded corners</li>
+                <li>Similar image handling as Circle variant</li>
+                <li>Maintains aspect ratio</li>
+                <li>Flexible sizing options</li>
+              </ul>
+            </div>
           </CardContent>
         </Card>
 
@@ -92,88 +90,135 @@ export default function AvatarPage() {
         <Card className="mb-8">
           <CardHeader>
             <CardTitle>Avatar Group</CardTitle>
-            <CardDescription>Multiple avatars grouped together with overlap</CardDescription>
+            <CardDescription>Multiple avatars grouped together</CardDescription>
           </CardHeader>
           <CardContent>
             <div className="relative w-full h-auto flex justify-center p-8 bg-muted rounded-lg">
               <Image
-                src={figmaDesigns.group}
-                alt="Avatar Group Component"
-                width={400}
+                src={figmaImages.group}
+                alt="Avatar Group"
+                width={600}
                 height={300}
-                className="w-auto h-auto"
+                className="w-full h-auto max-w-md"
               />
             </div>
-            <p className="text-sm text-muted-foreground mt-4">
-              Avatar group component showing multiple avatars stacked with negative margin spacing. Commonly used for displaying team members or user collaborators.
-            </p>
+            <div className="mt-4 space-y-2">
+              <p className="text-sm font-medium">Component Details:</p>
+              <ul className="text-sm text-muted-foreground space-y-1 list-disc list-inside">
+                <li>Multiple avatars with overlap effect</li>
+                <li>Negative margin spacing</li>
+                <li>Borders around each avatar for separation</li>
+                <li>Commonly used for team members or collaborators</li>
+              </ul>
+            </div>
           </CardContent>
         </Card>
 
-        {/* Component Features */}
+        {/* Design Specifications */}
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle>Component Features</CardTitle>
-            <CardDescription>Key characteristics and properties</CardDescription>
+            <CardTitle>Design Specifications</CardTitle>
+            <CardDescription>Avatar component design tokens and properties</CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div>
+              <h4 className="font-semibold text-sm mb-3">Component Types</h4>
+              <div className="space-y-3">
+                <div className="border-l-4 border-primary pl-4">
+                  <p className="font-medium text-sm">Circle Avatar</p>
+                  <p className="text-xs text-muted-foreground mt-1">Primary avatar component with full rounded corners</p>
+                </div>
+                <div className="border-l-4 border-primary pl-4">
+                  <p className="font-medium text-sm">Square Avatar</p>
+                  <p className="text-xs text-muted-foreground mt-1">Alternative variant with subtle rounded corners</p>
+                </div>
+                <div className="border-l-4 border-primary pl-4">
+                  <p className="font-medium text-sm">Avatar Group</p>
+                  <p className="text-xs text-muted-foreground mt-1">Container for multiple overlapping avatars</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-sm mb-3">Key Properties</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <p className="text-xs font-medium text-muted-foreground uppercase">Base Size</p>
+                  <p className="text-sm font-medium mt-1">40px × 40px</p>
+                </div>
+                <div>
+                  <p className="text-xs font-medium text-muted-foreground uppercase">Scale Mode</p>
+                  <p className="text-sm font-medium mt-1">FILL (maintains aspect ratio)</p>
+                </div>
+                <div>
+                  <p className="text-xs font-medium text-muted-foreground uppercase">Aspect Ratio</p>
+                  <p className="text-sm font-medium mt-1">1:1 (square)</p>
+                </div>
+                <div>
+                  <p className="text-xs font-medium text-muted-foreground uppercase">Corner Radius</p>
+                  <p className="text-sm font-medium mt-1">Variable (100% or subtle rounded)</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-sm mb-3">Design Tokens</h4>
+              <div className="bg-muted p-3 rounded text-xs space-y-1 font-mono">
+                <p>Corner Radius Variable: VariableID:90:559</p>
+                <p>Layout: Scalable (FIXED sizing with SCALE constraints)</p>
+                <p>Component IDs:</p>
+                <p className="pl-4">• Circle: 455:365</p>
+                <p className="pl-4">• Square: 455:364</p>
+                <p className="pl-4">• Group: 455:363</p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Implementation Guide */}
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle>Implementation Guide</CardTitle>
+            <CardDescription>How to use the Avatar component in shadcn/ui</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div>
-              <h4 className="font-semibold text-sm mb-2">Avatar Types</h4>
-              <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                <li>Circle Avatar - Full rounded corners</li>
-                <li>Square Avatar - Subtle rounded corners</li>
-                <li>Avatar Group - Multiple stacked avatars</li>
-              </ul>
+              <p className="text-sm font-medium mb-2">Installation</p>
+              <pre className="bg-muted p-3 rounded text-xs overflow-x-auto">
+                <code>npx shadcn-ui@latest add avatar</code>
+              </pre>
             </div>
 
             <div>
-              <h4 className="font-semibold text-sm mb-2">Image Handling</h4>
-              <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                <li>Supports image fills with FILL scale mode</li>
-                <li>Maintains aspect ratio (1:1)</li>
-                <li>Automatic fallback to initials when image unavailable</li>
-              </ul>
+              <p className="text-sm font-medium mb-2">Basic Usage (Circle Avatar)</p>
+              <pre className="bg-muted p-3 rounded text-xs overflow-x-auto">
+                <code>{`import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
+
+export function CircleAvatar() {
+  return (
+    <Avatar>
+      <AvatarImage src="https://..." alt="User" />
+      <AvatarFallback>UN</AvatarFallback>
+    </Avatar>
+  )
+}`}</code>
+              </pre>
             </div>
 
             <div>
-              <h4 className="font-semibold text-sm mb-2">Sizing</h4>
-              <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                <li>Base size: 40px × 40px</li>
-                <li>Scalable to various sizes via CSS</li>
-                <li>Responsive constraints</li>
-              </ul>
+              <p className="text-sm font-medium mb-2">Square Avatar Variant</p>
+              <pre className="bg-muted p-3 rounded text-xs overflow-x-auto">
+                <code>{`<Avatar className="rounded-md">
+  <AvatarImage src="https://..." alt="User" />
+  <AvatarFallback className="rounded-md">UN</AvatarFallback>
+</Avatar>`}</code>
+              </pre>
             </div>
 
             <div>
-              <h4 className="font-semibold text-sm mb-2">Group Spacing</h4>
-              <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
-                <li>Negative margin for overlap effect</li>
-                <li>Border around each avatar for separation</li>
-                <li>Optional count badge for additional members</li>
-              </ul>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Usage Example */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle>Implementation Example</CardTitle>
-            <CardDescription>How to use the Avatar component in your application</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm">
-              <code>
-{`import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
-
-// Single Avatar
-<Avatar>
-  <AvatarImage src="..." alt="User Name" />
-  <AvatarFallback>UN</AvatarFallback>
-</Avatar>
-
-// Avatar Group
-<div className="flex -space-x-4">
+              <p className="text-sm font-medium mb-2">Avatar Group</p>
+              <pre className="bg-muted p-3 rounded text-xs overflow-x-auto">
+                <code>{`<div className="flex -space-x-4">
   <Avatar className="border-2 border-background">
     <AvatarImage src="..." />
     <AvatarFallback>A</AvatarFallback>
@@ -182,39 +227,46 @@ export default function AvatarPage() {
     <AvatarImage src="..." />
     <AvatarFallback>B</AvatarFallback>
   </Avatar>
-</div>
-
-// Square Avatar
-<Avatar className="rounded-md">
-  <AvatarImage src="..." />
-  <AvatarFallback className="rounded-md">SQ</AvatarFallback>
-</Avatar>`}
-              </code>
-            </pre>
+  <Avatar className="border-2 border-background">
+    <AvatarImage src="..." />
+    <AvatarFallback>C</AvatarFallback>
+  </Avatar>
+</div>`}</code>
+              </pre>
+            </div>
           </CardContent>
         </Card>
 
-        {/* Design System Reference */}
+        {/* Design System Info */}
         <Card className="mb-8">
           <CardHeader>
             <CardTitle>Design System Reference</CardTitle>
-            <CardDescription>Figma design source and tokens</CardDescription>
+            <CardDescription>Figma design system details</CardDescription>
           </CardHeader>
-          <CardContent className="space-y-3 text-sm">
+          <CardContent className="space-y-4 text-sm">
             <div>
-              <p className="font-medium">File:</p>
+              <p className="font-medium">File Name:</p>
               <p className="text-muted-foreground">shadcn/ui components with variables & Tailwind classes</p>
             </div>
             <div>
-              <p className="font-medium">Components:</p>
-              <p className="text-muted-foreground">Circle (455:365) • Square (455:364) • Avatar Group (455:363)</p>
+              <p className="font-medium">Frame ID:</p>
+              <p className="text-muted-foreground">73:3473 (Avatar)</p>
             </div>
             <div>
-              <p className="font-medium">Design Tokens:</p>
-              <ul className="list-disc list-inside space-y-1 text-muted-foreground mt-1">
-                <li>Corner Radius Variable ID: VariableID:90:559</li>
-                <li>Layout: Scalable (FIXED sizing with SCALE constraints)</li>
-                <li>Aspect Ratio: 460x460 (square)</li>
+              <p className="font-medium">Component Variants:</p>
+              <ul className="text-muted-foreground space-y-1 list-disc list-inside">
+                <li>Circle (455:365) - Primary variant</li>
+                <li>Square (455:364) - Rounded square variant</li>
+                <li>Avatar_group (455:363) - Group container</li>
+              </ul>
+            </div>
+            <div>
+              <p className="font-medium">Design System Features:</p>
+              <ul className="text-muted-foreground space-y-1 list-disc list-inside">
+                <li>Design tokens with CSS variables</li>
+                <li>Tailwind CSS compatible</li>
+                <li>Responsive scaling constraints</li>
+                <li>Flexible sizing and positioning</li>
               </ul>
             </div>
           </CardContent>
