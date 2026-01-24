@@ -333,8 +333,14 @@ export default function ComponentsPage() {
           </CardContent>
         </Card>
 
-        {/* Back to Home */}
-        <div className="text-center">
+        {/* Navigation */}
+        <div className="flex gap-4 justify-center flex-wrap">
+          <Button asChild variant="outline">
+            <a href="/accordion">→ View Accordion Page</a>
+          </Button>
+          <Button asChild variant="outline">
+            <a href="/alert">→ View Alert Page</a>
+          </Button>
           <Button asChild variant="outline">
             <a href="/">← Back to Home</a>
           </Button>
