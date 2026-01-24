@@ -1,16 +1,15 @@
 'use client'
 
-import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function AvatarPage() {
-  // Figma component exports
+  // Figma component exports - Direct SVG from Figma source for best quality
   const figmaImages = {
     title: 'https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f8c92cf8-8d8d-4c24-98ca-be480ef2fed2',
-    circle: 'https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f79e9deb-866a-4f63-b598-44147afd420f',
-    square: 'https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/94e91b1e-e3aa-4488-96fe-a2d0f019dd1c',
-    group: 'https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/29b24862-bdc3-46fd-a7f2-2c3333e64a12',
+    circle: 'https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/82d58430-9b3c-4cc9-bc58-a7a0a8de508e',
+    square: 'https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/80602b85-3aaf-41a1-9ebd-95c931e8978c',
+    group: 'https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0bf0f5fa-3f4d-4fb5-96ef-8c2abbf24057',
   }
 
   return (
@@ -19,13 +18,11 @@ export default function AvatarPage() {
         {/* Header from Figma */}
         <div className="mb-12">
           <div className="relative w-full h-auto mb-8">
-            <Image
+            <img
               src={figmaImages.title}
               alt="Avatar Component Title"
-              width={600}
-              height={150}
-              priority
               className="w-full h-auto"
+              loading="eager"
             />
           </div>
         </div>
@@ -38,12 +35,10 @@ export default function AvatarPage() {
           </CardHeader>
           <CardContent>
             <div className="relative w-full h-auto flex justify-center p-8 bg-muted rounded-lg">
-              <Image
+              <img
                 src={figmaImages.circle}
                 alt="Circle Avatar"
-                width={600}
-                height={300}
-                className="w-full h-auto max-w-md"
+                className="w-full h-auto max-w-2xl"
               />
             </div>
             <div className="mt-4 space-y-2">
@@ -66,12 +61,10 @@ export default function AvatarPage() {
           </CardHeader>
           <CardContent>
             <div className="relative w-full h-auto flex justify-center p-8 bg-muted rounded-lg">
-              <Image
+              <img
                 src={figmaImages.square}
                 alt="Square Avatar"
-                width={600}
-                height={300}
-                className="w-full h-auto max-w-md"
+                className="w-full h-auto max-w-2xl"
               />
             </div>
             <div className="mt-4 space-y-2">
@@ -94,12 +87,10 @@ export default function AvatarPage() {
           </CardHeader>
           <CardContent>
             <div className="relative w-full h-auto flex justify-center p-8 bg-muted rounded-lg">
-              <Image
+              <img
                 src={figmaImages.group}
                 alt="Avatar Group"
-                width={600}
-                height={300}
-                className="w-full h-auto max-w-md"
+                className="w-full h-auto max-w-2xl"
               />
             </div>
             <div className="mt-4 space-y-2">
