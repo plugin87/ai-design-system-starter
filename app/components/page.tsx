@@ -342,6 +342,9 @@ export default function ComponentsPage() {
             <a href="/alert">→ View Alert Page</a>
           </Button>
           <Button asChild variant="outline">
+            <a href="/avatar">→ View Avatar Page</a>
+          </Button>
+          <Button asChild variant="outline">
             <a href="/">← Back to Home</a>
           </Button>
         </div>
