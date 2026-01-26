@@ -97,7 +97,7 @@ export default function ComponentsPage() {
                 <Checkbox
                   id="checkbox"
                   checked={checkboxValue}
-                  onCheckedChange={setCheckboxValue}
+                  onCheckedChange={(checked) => setCheckboxValue(checked === true)}
                 />
                 <Label htmlFor="checkbox" className="font-normal cursor-pointer">
                   Accept terms and conditions
