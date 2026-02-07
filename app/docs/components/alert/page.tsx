@@ -270,15 +270,6 @@ export function Demo() {
           </CardContent>
         </Card>
 
-        {/* Navigation */}
-        <div className="flex gap-4 justify-center">
-          <Button asChild variant="outline">
-            <a href="/components">← Back to Components</a>
-          </Button>
-          <Button asChild>
-            <a href="/">→ Back to Home</a>
-          </Button>
-        </div>
       </div>
     </div>
   )

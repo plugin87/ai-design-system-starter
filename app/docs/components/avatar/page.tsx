@@ -1,6 +1,5 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 
@@ -168,15 +167,6 @@ export default function AvatarPage() {
           </CardContent>
         </Card>
 
-        {/* Navigation */}
-        <div className="flex gap-4 justify-center flex-wrap">
-          <Button asChild variant="outline">
-            <a href="/components">← Back to Components</a>
-          </Button>
-          <Button asChild>
-            <a href="/">→ Back to Home</a>
-          </Button>
-        </div>
       </div>
     </div>
   )

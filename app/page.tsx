@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { ModeToggle } from '@/components/mode-toggle'
 
 const components = [
   { name: 'Button', description: 'Interactive button component' },
@@ -33,6 +34,9 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
+        <div className="flex justify-end mb-4">
+          <ModeToggle />
+        </div>
         {/* Header */}
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold tracking-tight mb-4">
@@ -128,11 +132,16 @@ export default function Home() {
         {/* CTA */}
         <div className="text-center space-y-4">
           <p className="text-muted-foreground">Ready to build something amazing?</p>
-          <Button size="lg" asChild>
-            <a href="https://ui.shadcn.com" target="_blank" rel="noopener noreferrer">
-              View Components Documentation
-            </a>
-          </Button>
+          <div className="flex gap-4 justify-center">
+            <Button size="lg" asChild>
+              <a href="/docs">Browse Documentation</a>
+            </Button>
+            <Button size="lg" variant="outline" asChild>
+              <a href="https://ui.shadcn.com" target="_blank" rel="noopener noreferrer">
+                shadcn/ui Docs
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </div>

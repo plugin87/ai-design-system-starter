@@ -1,6 +1,5 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import {
@@ -9,7 +8,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion'
-import { ChevronDown } from 'lucide-react'
 
 export default function AccordionPage() {
   return (
@@ -221,15 +219,6 @@ export function Demo() {
           </CardContent>
         </Card>
 
-        {/* Back Button */}
-        <div className="flex gap-4 justify-center">
-          <Button asChild variant="outline">
-            <a href="/components">← Back to Components</a>
-          </Button>
-          <Button asChild>
-            <a href="/">→ Back to Home</a>
-          </Button>
-        </div>
       </div>
     </div>
   )

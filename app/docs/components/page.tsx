@@ -336,16 +336,31 @@ export default function ComponentsPage() {
         {/* Navigation */}
         <div className="flex gap-4 justify-center flex-wrap">
           <Button asChild variant="outline">
-            <a href="/accordion">→ View Accordion Page</a>
+            <a href="/docs/components/accordion">→ Accordion</a>
           </Button>
           <Button asChild variant="outline">
-            <a href="/alert">→ View Alert Page</a>
+            <a href="/docs/components/alert">→ Alert</a>
           </Button>
           <Button asChild variant="outline">
-            <a href="/avatar">→ View Avatar Page</a>
+            <a href="/docs/components/alert-dialog">→ Alert Dialog</a>
           </Button>
           <Button asChild variant="outline">
-            <a href="/">← Back to Home</a>
+            <a href="/docs/components/aspect-ratio">→ Aspect Ratio</a>
+          </Button>
+          <Button asChild variant="outline">
+            <a href="/docs/components/avatar">→ Avatar</a>
+          </Button>
+          <Button asChild variant="outline">
+            <a href="/docs/components/badge">→ Badge</a>
+          </Button>
+          <Button asChild variant="outline">
+            <a href="/docs/components/breadcrumb">→ Breadcrumb</a>
+          </Button>
+          <Button asChild variant="outline">
+            <a href="/docs/components/button">→ Button</a>
+          </Button>
+          <Button asChild variant="outline">
+            <a href="/docs/components/button-group">→ Button Group</a>
           </Button>
         </div>
       </div>
