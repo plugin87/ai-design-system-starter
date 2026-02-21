@@ -1,0 +1,16 @@
+{
+  "$schema": "https://tokens.studio/schema.json",
+  "source": {
+    "provider": "github",
+    "owner": "plugin87",
+    "repo": "ai-design-system-starter",
+    "branch": "main",
+    "filePath": "tokens"
+  },
+  "tokenFormat": "dtcg",
+  "modes": {
+    "light": "tokens/light.tokens.json",
+    "dark": "tokens/dark.tokens.json",
+    "primary": "tokens/primary.tokens.json"
+  }
+}

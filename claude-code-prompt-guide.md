@@ -21,7 +21,7 @@ Based on the Figma design system with these variables, generate production-ready
 
 4. **TypeScript Definitions**: Create fully-typed token objects that match CSS variables, organized by category (colors, typography, spacing, effects).
 
-5. **Shadcn/ui Component Compatibility**: 
+5. **Shadcn/ui Component Compatibility**:
    - Extend only exposed CSS variables
    - Maintain all component states (normal, hover, active, disabled, focus-visible)
    - Keep Radix UI primitives untouched
@@ -170,7 +170,6 @@ When working with Claude Code:
 - "Generate design tokens" without providing Figma data
 - Approximate color values (use exact hex/HSL from Figma)
 - Skip any component states
-- Modify Shadcn component classes
 - Use numeric naming instead of semantic naming
 - Forget dark mode if Figma includes it
 - Skip TypeScript definitions

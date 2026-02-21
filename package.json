@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "sync-tokens": "node scripts/sync-tokens.mjs",
+    "sync-tokens:watch": "node scripts/sync-tokens.mjs --watch"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
