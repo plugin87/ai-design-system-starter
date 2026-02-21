@@ -40,7 +40,7 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
-          themes={["light", "dark", "primary"]}
+          themes={["light", "dark", "primary", "secondary-theme"]}
           disableTransitionOnChange
         >
           {children}

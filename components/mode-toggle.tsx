@@ -1,10 +1,10 @@
 "use client"
 
 import { useTheme } from "next-themes"
-import { Moon, Sun, Palette } from "lucide-react"
+import { Moon, Sun, Palette, SwatchBook } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const themeOrder = ["light", "dark", "primary"] as const
+const themeOrder = ["light", "dark", "primary", "secondary-theme"] as const
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme()
@@ -17,9 +17,10 @@ export function ModeToggle() {
 
   return (
     <Button variant="ghost" size="icon" onClick={cycleTheme}>
-      <Sun className="h-4 w-4 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90 primary:scale-0 primary:-rotate-90" />
+      <Sun className="h-4 w-4 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90 primary:scale-0 primary:-rotate-90 secondary-theme:scale-0 secondary-theme:-rotate-90" />
       <Moon className="absolute h-4 w-4 scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
       <Palette className="absolute h-4 w-4 scale-0 rotate-90 transition-all primary:scale-100 primary:rotate-0" />
+      <SwatchBook className="absolute h-4 w-4 scale-0 rotate-90 transition-all secondary-theme:scale-100 secondary-theme:rotate-0" />
       <span className="sr-only">Toggle theme</span>
     </Button>
   )
